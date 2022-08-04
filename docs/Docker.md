@@ -11,7 +11,7 @@ With Docker Apps can be developped inside packaged virtual environments which ru
 This makes it easier to collaborate on development projects, since every developer is working with the
 with the same prerequisites. So there should be no "But it works on my machine" situations.
 
-#### 3. Advantages
+#### 3. Benefits
 
 - Easier develop- & deployment
 - Fast (compared to VMs)
@@ -20,7 +20,7 @@ with the same prerequisites. So there should be no "But it works on my machine" 
 - Does not use a seperate Kernel but the same resources as the host os
 - Easier management of dependencies (because they are on the image)
 
-#### 4. Disadvantages
+#### 4. Drawbacks
 
 - Security Issues: An attack or vulnerability in the underlying operating system can potentially compromise all 
 containers running on the os.    
