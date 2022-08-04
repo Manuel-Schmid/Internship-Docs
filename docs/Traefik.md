@@ -10,7 +10,7 @@ Traefik integrates with existing infrastructure components and configures itself
     Load Balancer: Distributes client requests or network load efficiently across multiple servers 
     (No overworked server & automatic redirection of requests if a server goes down) 
 
-#### 2. Wieso braucht es Traefik?
+#### 2. Why do we need Traefik?
 
 Traefik gives developers greater visibility and reliability concerning the interactions between services by
 providing a way to control this communication. Debugging application problems without this dedicated layer of control
