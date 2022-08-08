@@ -11,23 +11,23 @@ Vue.js offers functionality to HTML applications and allows to extend HTML with 
 defined. (But there are built-in ones as well)
 
 
-### XX. How is Vue.js different from other frameworks?
+### 02. How is Vue.js different from other frameworks?
 Vue builds on top of HTML, CSS & JS, in React everything is inside of JavaScript (JSX). 
 Every pure HTML-File is a valid Vue template therefore you can use pure-html files without changing the code at all. 
 It is also easier for developers who have been working with HTML to read and write familiar code.
 It it **very** easy to integrate into a project. All you have to do is drop a single script tag into the page:
 
 
-### XX. What is Vue.js CLI?
+### 03. What is Vue.js CLI?
 The Vue.js CLI is a npm package which allows using the vue command in the terminal. There is a GUI-Version with the same capabilities as well, it's called Vue UI.
 
 
-### XX. Which browsers supports Vue.js?
+### 04. Which browsers supports Vue.js?
 Vue.js supports all browsers that are ES5-compliant (IE8 and below are not supported).
 A list of such browsers can be found here: https://kangax.github.io/compat-table/es5/
 
 
-### XX. What are Vue objects?
+### 05. What are Vue objects?
 A new Vue object is created with ```new Vue()```. The property ```el:``` binds the new Vue object to the HTML element with 
 id="app". When a Vue object is bound to an HTML element, the HTML element will change when the Vue object changes:
 
@@ -48,7 +48,7 @@ function myFunction() {
 </script>
 ```
 
-### XX. Attribute Bindings
+### 06. Attribute Bindings
 Mustaches cannot be used inside HTML attributes. Instead, use a ```v-bind directive```:
 Anything inside the " " when you bind a property using v-bind or : is javascript.
 So you can do any single line expressions that you do in JavaScript
@@ -60,14 +60,14 @@ So you can do any single line expressions that you do in JavaScript
 <div :id="dynamicId"></div>
 ```
 
-### XX. Two-Way-Bindings
+### 07. Two-Way-Bindings
 The v-model directive binds the value of HTML elements to application data.
 
 ```html
 <input v-model="message">
 ```
 
-### XX. What is Vue Loop Binding ?
+### 08. What is Vue Loop Binding ?
 
 ```html
 <div id="app">
@@ -101,19 +101,19 @@ Result:
 
 
 
-### XX. What is AOT Compilation?
+### 09. What is AOT Compilation?
 ahead-of-time compilation is the act of compiling an higher-level programming language into an lower-level language 
 *before* execution of a program, usually at build-time, to reduce the amount of work needed to be performed at run time
 
 
-### XX. How is AOT different from JIT Compilation?
+### 10. How is AOT different from JIT Compilation?
 Just-in-time compilation executes computer code *during* execution of a program rather than before execution.
 
-### XX. What are Vue Components?
+### 11. What are Vue Components?
 Components are reusable Vue instances with custom HTML elements. Components can be reused as many times as you want
 or used in another component, making it a child component. Data, computed, watch, and methods can be used in a Vue component.
 
-### XX. What are the Single-File Components of Vue.js?
+### 12. What are the Single-File Components of Vue.js?
 The SFCs are the recommended way to create Vue components. The file extension for such files is ```*.vue```.  
 A Vue SFC contains the component's logic (JS), template (HTML) and styles (CSS) all in a single file.  
 
@@ -141,7 +141,7 @@ button {
 </style>
 ```
 
-### XX. Vue.js Options API
+### 13. Vue.js Options API
 ```html
 <script>
 export default {
@@ -175,7 +175,7 @@ export default {
 </template>
 ```
 
-### XX. Vue.js Composition API
+### 14. Vue.js Composition API
 The Composition API allows to use less boilerplate because e.g. imports and top-level variables / functions declared in ```<script setup>``` are directly usable in the template.
 Here is the same component, with the exact same template, but using Composition API and ```<script setup>``` instead
 
@@ -202,7 +202,7 @@ onMounted(() => {
 </template>
 ```
 
-### XX. What are Directives?
+### 15. What are Directives?
 Directives are instructions for VueJS to do things in a certain way. Examples of built-in directives are: 
     
     v-if
@@ -226,7 +226,7 @@ Vue.directive('nameofthedirective', {
 ```
 
 
-### XX. Vue.js Conditionals & Loops (Directives)?
+### 16. Vue.js Conditionals & Loops (Directives)?
 ```html
 <!-- We can render content conditionally or in a loop with the v-if and v-for directives. -->
 
@@ -252,28 +252,28 @@ const list = ref([1, 2, 3])
 ```
 
 
-### XX. What is the DOM (Document Object Model) ?
+### 17. What is the DOM (Document Object Model) ?
 A programming interface for web documents. It represents the page so that programs can change the document structure, 
 style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact 
 with the page.
 
 
-### XX. What is a singleton?
+### 18. What is a singleton?
 The singleton pattern is a software design pattern that restricts the instantiation of a class 
 to one "single" instance.
 
 
-### XX. What is tree shaking?
+### 19. What is tree shaking?
 Tree shaking means to eliminate code that isn't in use ("dead-code").
 
 
-### XX. What is Shadow Dom?
+### 20. What is Shadow Dom?
 Shadow DOM is a sublevel of the standard Document Object Model (DOM).  this type of DOM doesn’t apply to the entire
 web project, only to the project component(s) expressed within it. In addition, shadow DOMs separate the elements
 they contain from any default styling and structuring instructions that apply across projects, such as certain CSS statements.
 
 
-### XX. What is the :host property in CSS for?
+### 21. What is the :host property in CSS for?
 The :host property is used to select a custom element from inside its shadow DOM.
 
 
