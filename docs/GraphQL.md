@@ -22,7 +22,7 @@ In GraphQL the result of a query has exactly the same shape so you always get ba
 
 Example Query:
 
-```js
+```
 {
   book(id: 123) {
     title
