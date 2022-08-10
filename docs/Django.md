@@ -84,5 +84,41 @@ E.g., Django includes a middleware component, AuthenticationMiddleware, that ass
 * <b>urls.py</b> – In this file, we store all links of the project and functions to call.
 * <b>wsgi.py</b> – This file is used in deploying the project in WSGI. It is used to help your Django application communicate with the webserver.
 
+## Code
 
+### Adding a Library
+
+1. bash into container
+2. pip install <...>
+3. pip freeze > requirements.txt
+
+
+### Migrations
+
+#### Make a migration:
+    
+    ./manage.py makemigrations
+    ./migrate
+
+#### Revert a migration
+
+    ./manage.py migrate <app> <migration number e.g. 0005>
+    // delete migration-file which should be reverted
+
+
+### Docker
+
+#### Bash into container (console):
+
+    docker-compose exec django bash
+
+#### Container management
+
+    docker-compose up // run container
+    docker-compose down // clears datatbase
+
+### Flake8
+#### Output Format: 
+
+    file path : line number : column number : error code : short description
 
