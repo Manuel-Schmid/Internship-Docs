@@ -122,3 +122,26 @@ E.g., Django includes a middleware component, AuthenticationMiddleware, that ass
 
     file path : line number : column number : error code : short description
 
+### PyTest
+#### What it does
+
+Pytest runs all files that start with 'test_...' and all methods in those files which start with 'test_...'
+
+E.g.:
+
+    def test_add():
+    assert add(3, 2) == 5
+
+#### Fixtures
+
+Easiest way to get fixture data: create them in the database and reverse engineer
+
+Command for reverse engineering database into json-file:
+```
+./manage.py dumpdata > fixtures.json
+```
+
+Command for loading fixtures into live db from fixture-file
+```
+./manage.py loaddata fixtures.json
+```

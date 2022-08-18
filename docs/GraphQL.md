@@ -64,3 +64,51 @@ Response:
     }
 }
 ```
+
+Example Create-Mutation: 
+```
+mutation {
+  createPost(postInput: {title: "test", text: "this is a test", categoryId: 1, ownerId: 1}) {
+    post {
+      title
+    }
+  }
+}
+```
+
+Example Create-Mutation with Parameter-Syntax:
+```
+mutation CreatePost($input: PostInput!) {
+  updatePost(postInput: $input) {
+    post {
+      title
+      text
+      dateCreated
+    }
+  }
+}
+```
+
+```
+  {
+    "input": {
+      "title": "test",
+      "text": "this a test",
+      "category": 1,
+      "owner": 1
+    }
+  }
+```
+
+
+Example Update-Mutation:
+```
+mutation {
+  updateCategory(input: {name: "Sports", id: 2}) {
+    category {
+      name
+    }
+  }
+}
+```
+
