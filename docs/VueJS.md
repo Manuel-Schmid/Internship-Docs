@@ -3,7 +3,6 @@
 
 Vue.js is a open-source frontend JavaScript framework. It allows building user interfaces and SPAs. It uses a virtual
 DOM (like React)
-
 But it is important to keep in mind that "Vue.js itself is not a full-blown framework - it is focused on the view layer only."
 
 ### 2. Why do we need a framework like Vue.js?
@@ -49,9 +48,9 @@ function myFunction() {
 ```
 
 ### 06. Attribute Bindings
-Mustaches cannot be used inside HTML attributes. Instead, use a ```v-bind directive```:
-Anything inside the " " when you bind a property using v-bind or : is javascript.
-So you can do any single line expressions that you do in JavaScript
+Mustaches cannot be used inside HTML attributes. Instead, use a ```v-bind directive```.
+&nbsp;Anything inside the " " when you bind a property using v-bind or : is javascript.
+So you can do any single line expressions that you can do in JavaScript
 
 
 ```html
@@ -277,3 +276,53 @@ they contain from any default styling and structuring instructions that apply ac
 The :host property is used to select a custom element from inside its shadow DOM.
 
 
+### 22. Apollo
+Apollo is a toolkit that connects Vue.js and GraphQL APIs. The frontend defines an apolloClient
+which then communicates with the backend via. GraphQL API calls. 
+
+The official docs can be found <a href="https://www.apollographql.com/docs/">here<a/> <br>
+Apollo Installation guide for Vue.js: <a href="https://v4.apollo.vuejs.org/guide/installation.html">here</a>
+
+
+To use Apollo we create an ApolloClient.js file in the src folder.
+The content of said file:
+
+```js
+import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client/core';
+
+// HTTP connection to the API
+const httpLink = createHttpLink({
+    // You should use an absolute URL here
+    uri: process.env.VUE_APP_GRAPHQL_API_URL,
+});
+
+// Cache implementation
+const cache = new InMemoryCache();
+
+// Create the apollo client
+const apolloClient = new ApolloClient({
+    link: httpLink,
+    cache,
+});
+
+export default apolloClient;
+```
+
+Then we add it in main.js
+
+```js
+import App from './App.vue';
+import { createApp, provide, h } from 'vue';
+import { DefaultApolloClient } from '@vue/apollo-composable';
+import apolloClient from "@/ApolloClient";
+
+const app = createApp({
+    setup () {
+        provide(DefaultApolloClient, apolloClient);
+    },
+
+    render: () => h(App),
+});
+
+app.mount('#app');
+```
